@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TicTacToe</title>
+    <style>
+      body {
+        background-color: bisque;
+      }
+      .grid,
+      .tic-tac-toe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+      }
+      #message {
+        font-size: 1.5rem;
+        font-weight: bolder;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .col {
+        background-color: rgb(87, 250, 236);
+        margin: 0.25rem;
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        cursor: pointer;
+        padding: 0.25rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+      }
+      #resetBtn {
+        margin: 0.5rem;
+        margin-top: 1.5rem;
+        font-size: large;
+      }
+      .col:hover,
+      .winning-cell {
+        color: white;
+        background-color: rgb(31, 167, 4);
+      }
+      .info {
+        color: rgb(0, 68, 255);
+      }
+      .success {
+        color: rgb(31, 167, 4);
+      }
+      .warning {
+        color: yellow;
+      }
+      .error {
+        color: rgb(255, 38, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tic-tac-toe">
+      <p id="message"></p>
+      <div class="grid">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+      </div>
+      <button id="resetBtn" onclick="intializeGame()">Restart</button>
+    </div>
+    <script src="./TicTacToe.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
